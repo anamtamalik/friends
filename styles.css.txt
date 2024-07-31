@@ -1,0 +1,104 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    text-align: center;
+}
+
+.flower-container {
+    position: relative;
+    width: 200px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.flower {
+    position: relative;
+    width: 50px;
+    height: 200px;
+    transform: scale(0);
+    animation: grow 3s ease-in-out forwards;
+}
+
+.stem {
+    position: absolute;
+    width: 10px;
+    height: 200px;
+    background-color: green;
+    bottom: 0;
+    left: 20px;
+    animation: stemGrow 3s ease-in-out forwards;
+}
+
+.petals {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: pink;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    transform: scale(0);
+    animation: petalsBloom 3s ease-in-out 1.5s forwards;
+}
+
+.center {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: yellow;
+    border-radius: 50%;
+    top: 15px;
+    left: 15px;
+    transform: scale(0);
+    animation: centerAppear 3s ease-in-out 2s forwards;
+}
+
+.message h1 {
+    margin-top: 20px;
+    font-size: 2rem;
+    opacity: 0;
+    animation: messageAppear 3s ease-in-out 3s forwards;
+}
+
+@keyframes grow {
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes stemGrow {
+    to {
+        height: 200px;
+    }
+}
+
+@keyframes petalsBloom {
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes centerAppear {
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes messageAppear {
+    to {
+        opacity: 1;
+    }
+}
